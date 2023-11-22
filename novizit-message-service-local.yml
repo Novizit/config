@@ -33,4 +33,11 @@ eureka:
         fetch-registry: true
         register-with-eureka: true
     # instance:
-    #     hostname: ${EUREKA_HOST:localhost}          
+    #     hostname: ${EUREKA_HOST:localhost}     
+    #OPEN API CUSTOM PATH
+springdoc:
+    api-docs:
+        path: /api-docs
+    swagger-ui:
+        path: /swagger-ui.html
+        operationsSorter: method
