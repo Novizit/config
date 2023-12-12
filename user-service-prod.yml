@@ -1,0 +1,40 @@
+spring:
+    application:
+        name: user-service
+    datasource:
+        url: jdbc:mysql://${DATASOURCE_HOST:localhost}:3306/users
+        username: app_messaging
+        password: App@2023
+#        driverClassName: org.postgresql.Driver
+    jpa:
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQL8Dialect      
+    zipkin:
+        base-url: https://${ZIPKIN_HOST:localhost}:9411                
+eureka:
+    client:
+        service-url:
+            defaultZone: https://${EUREKA_HOST:localhost}:8761/eureka
+        fetch-registry: true
+        register-with-eureka: true
+    instance:
+        nonSecurePortEnabled: false
+        securePortEnabled: true
+        statusPageUrl: https://${eureka.hostname}:${server.port}/actuator/info
+        healthCheckUrl: https://${eureka.hostname}:${server.port}/health
+        homePageUrl: https://${eureka.hostname}:${server.port}/
+        #hostname: ${EUREKA_HOST:localhost}     
+#RABBIT MQ SETUP...
+    rabbitmq:
+        host: https://${RABBITMQ_HOST:localhost}
+        username: guest
+        port: 5672
+        password: guest
+        user: 
+            queue: user-queue                   
+            exchange: user-exchange
+            routing:
+                key: user-queue

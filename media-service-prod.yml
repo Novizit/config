@@ -1,0 +1,7 @@
+amazon:
+    s3:
+        bucket:
+            name: novizit-devtest
+    aws:
+        access-key: AKIA4ZV25EYBTIUBO7XL
+        secret-key: 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
