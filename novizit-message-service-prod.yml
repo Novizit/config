@@ -2,9 +2,9 @@ spring:
     application:
         name: novizit-message-service
     datasource:
-        url: ''
-        username: ''
-        password: ''
+        url: 'jdbc:mysql://novizit.civtsyvgwfpk.ap-south-1.rds.amazonaws.com:3306/app_messaging'
+        username: 'app_messaging'
+        password: 'App@2023'
 #        driverClassName: org.postgresql.Driver
     jpa:
         hibernate:
