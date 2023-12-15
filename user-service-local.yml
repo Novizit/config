@@ -3,8 +3,8 @@ spring:
         name: user-service
     datasource:
         url: jdbc:mysql://${DATASOURCE_HOST:localhost}:3306/users
-        username: app_messaging
-        password: App@2023
+        username: root
+        password: novizit2023
 #        driverClassName: org.postgresql.Driver
     jpa:
         hibernate:
