@@ -2,7 +2,7 @@ spring:
     application:
         name: user-service
     datasource:
-        url: jdbc:mysql://novizit-mysql-server.mysql.database.azure.com:3306/app_messaging
+        url: jdbc:mysql://novizit-mysql-server.mysql.database.azure.com:3306/users
         username: novizit
         password: Apple@2024
 #        driverClassName: org.postgresql.Driver
